@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Divisas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="titulo"> Calculadora de Divisas</h1>
+    </header>
+
+    <main>
+        <section class="convertidor-moneda">
+            <form id="formularioDivisas">
+                
+                <div class="inputCantidad">
+                    <label for="cantidad">Cantidad a convertir:</label>
+                    <input type="number" id="cantidad" name="cantidad" placeholder="Ej: 100USD" autocomplete="off">
+                    <span id="cantidad-error"></span>
+                </div>
+
+                <div class="selector-moneda">
+
+                    <div class="grupo-origen">
+                        <label for="monedaOrigen">De:</label>
+                        <select name="monedaOrigen" id="monedaOrigen">
+                            <option value="USD">USD - Dolar</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="MXN">MXN - Peso Méxicano</option>
+                            <option value="CAD">CAD - Dolar Canadiense</option>
+                        </select>
+                    </div>
+
+                    <div class="grupo-destino">
+                        <label for="monedaDestino">A:</label>
+                        <select name="monedaDestino" id="monedaDestino">
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="USD" selected>USD - Dólar</option>
+                            <option value="MXN">MXN - Peso Méxicano</option>
+                            <option value="CAD">CAD - Dólar Canadiense</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="botones">
+                    <button type="button" id="botonConvertidor" class="botonPrimario">Calcular</button>
+                    <button type="button" id="botonLimpiar" class="botonSecundario">Limpiar</button>
+                </div>
+            </form>
+
+            <section id="resultado" class="cajaResultado">
+                <p id="textoResultado">Ingresa el Monto a Convertir.</p>
+            </section>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

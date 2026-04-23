@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+:root{
+    --principal: #088395;
+    --fondo: #071952;
+    --blanco: #EBF4F6;
+    --error: red;
+    --fuente: "Google Sans Flex", sans-serif;
+}
+
+body{
+    font-family: var(--fuente);
+    background-color: var(--fondo);
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+main{
+    width: 100%;
+    max-width: 530px;
+}
+
+.titulo{
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.convertidor-moneda{
+    background-color: var(--principal);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: var(--blanco);
+}
+
+.inputCantidad, 
+.grupo-origen, 
+.grupo-destino{
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input, 
+select{
+    padding: 12px;
+    border:  2px solid var(--fondo);
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, 
+select:focus{
+    border-color: #37B7C3;
+}
+
+.selector-moneda{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+#cantidad-error{
+    color: var(--error);
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+    font-weight: 500;
+    min-height: 1.2rem;
+}
+
+.botones{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 0.6rem;
+}
+
+button{
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--blanco);
+    background-color: var(--fondo);
+}
+
+button:hover{
+    transform: scale(0.97);
+    background-color: #37B7C3;
+}
+
+.cajaResultado{
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid #f1f1f1;
+    text-align: center;
+}
+
+#textoResultado{
+    font-size: 1.25rem;
+    font-weight: 700;
+
+}
+
+
+@media (max-width: 768px){
+    main{
+        max-width: 90%;
+    }
+
+    .titulo{
+        font-size: 1.6rem;
+    }
+
+}
+
+@media (max-width: 480px){
+    .convertidor-moneda{
+        padding: 1.5rem;
+    }
+
+    .selector-moneda{
+        grid-template-columns: 1fr;
+    }
+
+    .botones{
+        grid-template-columns: 1fr;
+    }
+
+    .titulo{
+        font-size: 1.4rem;
+    }
+    
+    input, select, button {
+        padding: 10px;
+    }
+}
+
+
+
+
+
